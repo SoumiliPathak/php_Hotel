@@ -1,0 +1,16 @@
+#footer{
+    background-color:rgba(0, 0, 0, 0.778);
+    color:white;
+    display:flex;
+    justify-content:space-evenly
+}
+@media(max-width:600px)
+{
+    #footer{
+        flex-direction:column;
+        padding-left:120px;
+    }
+    #follow-us{
+        display:flex;
+    }
+}

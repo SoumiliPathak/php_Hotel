@@ -1,0 +1,18 @@
+#contact-body{
+    height:400px;
+    display:flex;
+    justify-content:space-evenly ;
+}
+@media(max-width:600px)
+{
+    #contact-body
+    {
+        flex-direction:column;
+        height:auto;
+        padding-left:40px;
+    }
+    #contact-map{
+        width:100%;
+    }
+   
+}

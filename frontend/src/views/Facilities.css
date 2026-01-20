@@ -1,0 +1,46 @@
+#service-body{
+    padding-bottom:50px;
+}
+#facilities{
+    display:flex;
+    padding-left:300px;
+}
+.facilities-list{
+    margin-left:150px;
+    color:olivedrab;
+    font-weight:bolder;
+}
+#facilities-image{
+    display:grid;
+    padding-left:300px;
+    grid-template-columns:250px 250px 250px 250px;
+}
+.services{
+    height:250px;
+    width:250px;
+    border-radius:6px;
+}
+#facilities-h1{
+    text-align:center;
+    color:orange;
+}
+@media(max-width:600px)
+{
+    #facilities{
+        flex-direction:column;
+      padding-left:70px;
+    }
+    .facilities-list{
+        margin-top:0;
+        margin-left:0;
+    }
+    .services{
+        height:100px;
+        width:100px;
+    }
+    #facilities-image{
+        display:grid;
+        padding-left:0;
+        grid-template-columns:100px 100px 100px 100px; 
+    }
+}

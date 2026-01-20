@@ -1,0 +1,55 @@
+#user-details-body{
+    height:auto;
+    display:flex;
+}
+#user-body{
+    display:flex;
+}
+#user-image{
+    height:200px;
+    width:200px;
+    border-radius:100%;
+    margin-right:50px;
+}
+#logout{
+    height:35px;
+    width:70px;
+    border-radius:6px;
+    background-color: orange;
+    color:white;
+    border-color:white;
+}
+#booking-h1{
+    text-align: center;
+}
+.user-details-btns{
+    background-color:orange;
+    color:white;
+    height:35px;
+    width:100px;
+    border-radius:6px;
+    margin-left:30px;
+}
+#user-details-div{
+    margin-right:600px;
+}
+@media(max-width:600px){
+    #user-details-body{
+        flex-direction:column;
+        width:250px;
+    }
+    #user-details-div{
+        margin-right:0;
+    }
+    #user-image{
+        margin-right:0;
+        width:350px;
+        height:350px;
+    }
+    .user-details-btns{
+        margin-left:0;
+    }
+    .booking-div{
+        margin-left:30px;
+    }
+}

@@ -1,0 +1,169 @@
+#home-body{
+    height:auto;
+    padding-bottom:20px;
+}
+.carousel-pic{
+    height:700px;
+    border-radius:7px;
+}
+
+#home-h1{
+ color:orange;
+ font-style:italic;
+ animation: animated-text 2s ease-in-out 0s infinite normal;
+}
+#home-h3{
+   
+    color:olivedrab;
+    font-style:italic;
+   
+}
+#home-h2{
+    color:orange;
+}
+#home-div{
+    text-align:center;
+    z-index:1;
+    position: absolute;
+    top:150px;
+    left:600px;
+}
+#home-contact-div{
+    padding-left:400px;
+}
+#home-check-availability{
+    padding-left:550px;
+}
+#home-check-availability-outer-div{
+    border-radius:6px;
+    width:500px;
+    height:auto;
+    box-shadow:5px 5px 10px 2px rgba(0,0,0,0.5);
+    padding-bottom:20px;
+}
+#home-check-availability-heading{
+    background-color:orange;
+    color:white;
+    text-align:center;
+    border-radius:6px;
+    height:30px;
+}
+#home-check-availability-inner-div,#home-check-availability-labels,#home-check-availability-errors{
+    display:flex;
+    justify-content:space-between;
+}
+#home-check{
+    background-color:olive;
+    border-radius:6px;
+    border-color:white;
+    color:white;
+    height:30px;
+    width:200px;
+    margin-left:150px;
+}
+#nob{
+    height:30px;
+    width:200px;
+    margin-left:10px;
+}
+@keyframes animated-text{
+    from{transform:scale(1);}
+    to{transform: scale(1.5);}
+}
+#home-about-div{
+    width:980px;
+    padding-left:300px;
+    color:orange;
+    text-align: justify;
+}
+.home-review{
+    width:250px;
+    height:280px;
+    background-color:white;
+    border-style:solid;
+    border-width:2px;
+    border-color:white;
+    border-radius:6px;
+    box-shadow:5px 5px 10px 2px rgba(0,0,0,0.5);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#home-reviews{
+    display:grid;
+    grid-template-columns:250px 250px 250px;
+    column-gap:20px;
+    padding-left:400px;
+}
+.home-review-img{
+    height:150px;
+  width:150px;
+  border-radius:100%;
+  margin-left:50px;
+}
+#home-facilities{
+    display:flex;
+    padding-left:300px;
+}
+.home-facilities-list{
+    margin-left:150px;
+    color:olivedrab;
+    font-weight:bolder;
+}
+#home-about-text{
+    color:olivedrab;
+    font-weight: bolder;
+}
+@media(max-width:600px)
+{
+    #home-div{
+        left:30px;
+        top:200px;
+        font-size:18px;
+    } 
+    #home-about-div{
+        width:300px;
+        padding-left:40px;
+    }
+    #home-about-text{
+        font-size:12px;
+    }
+    #home-facilities{
+      flex-direction:column;
+      padding-left:70px;
+    }
+    .home-facilities-list{
+        margin-top:0;
+        margin-left:0;
+    }
+    .home-review{
+        width:230px;
+        height:260px;
+    }
+    .home-review-img{
+        height:100px;
+        width:100px;
+    }
+    #home-reviews{
+        display:block;
+        padding-left:80px;
+    }
+    #home-contact-div{
+        padding-left:50px;
+    }
+    #contact-iframe{
+        width:300px;
+    }
+    #home-check-availability{
+        padding-left:10px;
+    }
+    #home-check-availability-outer-div{
+        width:350px;
+    }
+    #home-check{
+        margin-left:100px;
+        width:150px;
+    }
+    #nob{
+        margin-top:10px;
+    }
+}

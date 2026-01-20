@@ -1,0 +1,77 @@
+#login-body{
+    height:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border-style:solid;
+    border-width:2px;
+    border-color:white;
+    border-radius:6px;
+    width:300px;
+    background-color:white;
+    box-shadow:5px 5px 10px 2px rgba(0,0,0,0.5);
+    z-index:1;
+    position:absolute;
+}
+#login-form-bg-image{
+    height:500px;
+    width:100%;
+}
+input:hover{
+    border-color:orange;
+}
+#login{
+    background-color:orange;
+    color:white;
+    position: relative;
+    left:20px;
+    width:250px;
+    height:30px;
+    border-style:solid;
+    border-width:2px;
+    border-color:white;
+    border-radius:6px;
+}
+#clear{
+    background-color:orange;
+    color:white;
+    width:250px;
+    height:30px;
+    border-style:solid;
+    border-width:2px;
+    border-color:white;
+    border-radius:6px;
+    position:relative;
+    left:20px;
+  
+}
+.forgot-pw{
+    background-color:orange;
+    color:white;
+    height:30px;
+    width:70px;
+    border-radius:6px;
+    position:relative;
+    left:200px;
+}
+div{
+    margin-top:20px;
+}
+#text{
+  
+    color:rgb(0, 187, 255);
+    text-decoration:none;
+}
+#forgot-pw-div{
+    background-color:white;
+    border-radius:6px;
+    height: auto;
+    width:300px;
+    padding-bottom:10px;
+    z-index:1;
+    position:absolute;
+}
+
+

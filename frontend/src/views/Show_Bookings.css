@@ -1,0 +1,51 @@
+#booking-body{
+    display:flex;
+    flex-direction: column;
+    padding-left:20px;
+    padding-right:20px;
+    height:auto;
+}
+.booking-div{
+   display:flex;
+   border-radius:6px;
+   box-shadow:5px 5px 10px 2px rgba(0,0,0,0.5);
+   background-color:white;
+   padding-left:10px;
+   padding-top:10px;
+   padding-bottom:10px;
+   width:100%;
+}
+.booking-image{
+   height:400px;
+   width:400px;
+   margin-right:100px;
+}
+#cancel-booking{
+    background-color:orange;
+    color:white;
+    height:30px;
+    width:150px;
+    border-radius:6px;
+    margin-right:50px;
+}
+@media(max-width:600px){
+    .booking-div{
+        flex-direction:column;
+        font-size:13px;
+        width:300px;
+    } 
+    .booking-image{
+        height:150px;
+        width:100%;
+    }
+    .booking-h3{
+        margin-top:4px;
+        margin-bottom:2px;
+    }
+    #booking-body{
+        padding-left:10px;
+    }
+    #cancel-booking{
+        margin-right:30px;
+    }
+}

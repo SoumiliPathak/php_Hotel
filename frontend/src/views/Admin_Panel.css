@@ -1,0 +1,38 @@
+#admin-body{
+    height:auto;
+    width:auto;
+    display:flex;
+    background-image:url("http://localhost:8000/storage/images/7c6749a1-e3c6-41e5-bc67-b502f4fa4978.jpg");
+    background-size:cover;
+}
+#sidebar{
+    background-color:orange;
+    color:white;
+    width:150px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin-right:100px;
+    margin-top:0;
+    margin-bottom:0;
+}
+.user-img-admin-panel{
+    height:100px;
+    width:100%;
+}
+table,tr,th,td{
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+}
+td{
+    text-align:center;
+}
+table{
+    background-color:white;
+    color:black;
+}
+.users-columns{
+    width:170px;
+}
+
