@@ -17,7 +17,7 @@ class PaymentController extends Controller
             "merchantTransactionId"=>$transaction_id,
             "merchantBookingId"=>$id,
             "amount"=>$amount,
-            "redirectUrl"=>"http://localhost:3000/payment-status?transaction_id=$transaction_id&booking_id=$id",
+            "redirectUrl"=>"https://hotel-seashore.onrender.com/payment-status?transaction_id=$transaction_id&booking_id=$id",
             "paymentInstrument"=>[
                 "type"=>"PAY_PAGE"
             ],

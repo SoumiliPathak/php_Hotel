@@ -38,6 +38,9 @@ RUN php artisan config:clear
 RUN php artisan route:clear
 RUN php artisan view:clear
 
+#create storage symlink
+RUN php artisan storage:link
+
 # Apache document root to /public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf
