@@ -1,4 +1,4 @@
-# Use official PHP image
+# Use official PHP Apache image
 FROM php:8.2-apache
 
 # Enable Apache rewrite
@@ -22,31 +22,37 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy Laravel files
+# Copy Laravel project
 COPY . .
 
-# Set permissions
-RUN chown -R www-data:www-data \
-    /var/www/html/storage \
-    /var/www/html/bootstrap/cache
+# Permissions
+RUN chown -R www-data:www-data storage bootstrap/cache \
+ && chmod -R 775 storage bootstrap/cache
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Laravel production optimizations
-RUN php artisan config:clear
-RUN php artisan route:clear
-RUN php artisan view:clear
+# Clear Laravel caches
+RUN php artisan config:clear \
+ && php artisan route:clear \
+ && php artisan view:clear
 
-#create storage symlink
-RUN php artisan storage:link
-
-# Apache document root to /public
+# Set Apache document root to /public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf
+
+# Apache config to allow symlinks & access (CRITICAL)
+RUN printf "<Directory /var/www/html/public>\n\
+    AllowOverride All\n\
+    Require all granted\n\
+    Options FollowSymLinks\n\
+</Directory>\n" > /etc/apache2/conf-available/laravel.conf \
+ && a2enconf laravel
 
 # Expose port
 EXPOSE 80
 
-# Start Apache
-CMD php artisan migrate --force && apache2-foreground
+# Start app (runtime-safe)
+CMD php artisan migrate --force \
+ && php artisan storage:link \
+ && apache2-foreground
